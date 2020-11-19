@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            width: 2000px;
+            transform: translateX(2000px);
+            position: relative;
+        }
+        
+        .poyezd {
+            width: 1800px;
+            height: 400px;
+            border: 1px solid white;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        .d10 {
+            width: 0;
+            height: 0;
+            border-bottom: 200px solid #CDE5E1;
+            border-left: 200px solid transparent;
+        }
+        
+        .d9 {
+            width: 0;
+            height: 0;
+            border-bottom: 200px solid #BBE1DE;
+            border-right: 200px solid transparent;
+            transform: translate(1600px, -1600px);
+        }
+        
+        .eshik1-1 {
+            width: 75px;
+            height: 200px;
+            background-color: #BBE1DE;
+            transform: translateX(350px);
+        }
+        
+        .animation1-1 {
+            animation-name: eshik1-1;
+            animation-duration: 10s;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes eshik1-1 {
+            100% {
+                transform: translateX(300px);
+            }
+        }
+        
+        .animation1-11 {
+            animation-name: eshik1-11;
+            animation-duration: 10s;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes eshik1-11 {
+            100% {
+                transform: translateX(500px);
+            }
+        }
+        
+        .eshik1-2 {
+            width: 75px;
+            height: 200px;
+            background-color: #BBE1DE;
+            transform: translate(415px, -200px);
+        }
+        
+        .animation1-2 {
+            animation-name: eshik1-2;
+            animation-duration: 10s;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes eshik1-2 {
+            100% {
+                transform: translate(500px, -200px);
+            }
+        }
+        
+        .oyna1 {
+            width: 100px;
+            height: 100px;
+            background-color: lightskyblue;
+            transform: translate(600px, -400px);
+        }
+        
+        .eshik2-1 {
+            width: 75px;
+            height: 200px;
+            background-color: #BBE1DE;
+            transform: translate(800px, -500px);
+        }
+        
+        .animation2-1 {
+            animation-name: eshik2-1;
+            animation-duration: 10s;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes eshik2-1 {
+            100% {
+                transform: translate(750px, -500px);
+            }
+        }
+        
+        a {
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .eshik2-2 {
+            width: 75px;
+            height: 200px;
+            background-color: #BBE1DE;
+            transform: translate(875px, -700px);
+        }
+        
+        .animation2-2 {
+            animation-name: eshik2-2;
+            animation-duration: 10s;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes eshik2-2 {
+            100% {
+                transform: translate(950px, -700px);
+            }
+        }
+        
+        .eshik3-1 {
+            width: 75px;
+            height: 200px;
+            background-color: #BBE1DE;
+            transform: translate(1275px, -1000px);
+        }
+        
+        .animation3-1 {
+            animation-name: eshik3-1;
+            animation-duration: 10s;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes eshik3-1 {
+            100% {
+                transform: translate(1225px, -1000px);
+            }
+        }
+        
+        .eshik3-2 {
+            width: 75px;
+            height: 200px;
+            background-color: #BBE1DE;
+            transform: translate(1350px, -1200px);
+        }
+        
+        .animation3-2 {
+            animation-name: eshik3-2;
+            animation-duration: 10s;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes eshik3-2 {
+            100% {
+                transform: translate(1400px, -1200px);
+            }
+        }
+        
+        .oyna2 {
+            width: 100px;
+            height: 100px;
+            background-color: lightskyblue;
+            transform: translate(1075px, -900px);
+        }
+    </style>
+
+</head>
+
+<body><audio src="184[kb]pexplode.wav.mp3" autoplay></audio>
+    <div class="container">
+        <div class="poyezd">
+            <div class="d10">
+
+            </div>
+            <div class="eshik1 " onclick="my()">
+
+
+                <div class="eshik1-1">
+                    <a href="home.html">HOME</a>
+                </div>
+
+                <div class="eshik1-2"><a href="home.html">HOME</a></div>
+            </div>
+            <div class="oyna1">
+
+            </div>
+            <div class="eshik2">
+                <div class="eshik2-1"><a href="home.html">About</a></div>
+
+                <div class="eshik2-2">
+                    <a href="home.html">About</a>
+                </div>
+
+            </div>
+            <div class="oyna2">
+
+            </div>
+            <div class="eshik3">
+                <div class="eshik3-1"><a href="home.html">Link</a></div>
+                <div class="eshik3-2">
+                    <a href="home.html">Link</a>
+                </div>
+            </div>
+            <div class="d9">
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+</body>
+<script>
+    var pos = 0;
+
+    var box = document.querySelector(".container");
+    var t = setInterval(move, 0.0001);
+    var eshik11 = document.querySelector(".eshik1-1");
+    var eshik12 = document.querySelector(".eshik1-2");
+    var eshik21 = document.querySelector(".eshik2-1");
+    var eshik22 = document.querySelector(".eshik2-2");
+    var eshik31 = document.querySelector(".eshik3-1");
+    var eshik32 = document.querySelector(".eshik3-2");
+    eshik11.addEventListener("click", eshikaa, true);
+    eshik11.addEventListener("dbclick", eshikaa2, true);
+
+    function eshikaa() {
+        eshik11.style.transform = "translateX(250px)";
+        // eshik11.classList.add("animation1-1");
+    }
+
+    function eshikaa2() {
+        eshik11.style.transform = "translateX(500px)";
+    }
+
+    function move() {
+        if (pos >= 2200) {
+            clearInterval(t);
+            eshik11.classList.add("animation1-1");
+            eshik12.classList.add("animation1-2");
+            eshik21.classList.add("animation2-1");
+            eshik22.classList.add("animation2-2");
+            eshik31.classList.add("animation3-1");
+            eshik32.classList.add("animation3-2");
+
+        } else {
+            pos += 3;
+            box.style.right = pos + "px";
+        }
+        requestAnimationFrame()
+    }
+    requestAnimationFrame()
+</script>
+
+</html>
